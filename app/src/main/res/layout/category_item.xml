@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/category_layout_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/catClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/_7sdp"
+        android:layout_margin="@dimen/_7sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/category_card_view_bg"
+            android:padding="@dimen/_7sdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/circleCardView"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                app:cardCornerRadius="@dimen/_40sdp"
+                android:layout_centerHorizontal="true"
+                >
+                <ImageView
+                    android:id="@+id/cat_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/cat_title"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:text="Category Title"
+                android:layout_below="@id/circleCardView"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/white"
+                android:background="@drawable/title_text_background"
+                android:textStyle="bold"
+                android:fontFamily="@font/kalpurush"
+                />
+            <TextView
+                android:id="@+id/cat_subTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category Sub Title"
+                android:layout_below="@id/cat_title"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/white"
+                android:background="@drawable/sub_text_background"
+                android:fontFamily="@font/kalpurush"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

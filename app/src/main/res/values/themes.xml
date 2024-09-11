@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.BookApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/dim</item>
+    </style>
+
+    <style name="Theme.BookApp" parent="Base.Theme.BookApp" />
+    <style name="MyToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </style>
+</resources>

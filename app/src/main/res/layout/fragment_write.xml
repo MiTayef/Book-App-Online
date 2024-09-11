@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <!-- Toolbar Area -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dim"
+        android:elevation="@dimen/_3sdp"
+        android:theme="@style/MyToolbar">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/kalpurush"
+        android:text="Write Your Favourite Thoughts"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18ssp" />
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_30sdp"
+                app:lottie_url="https://lottie.host/660e54c7-9e3d-4ef8-a0e8-67aedc497c5f/XgUBaYLgH4.json"                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+            `</LinearLayout>`
+
+        `</androidx.appcompat.widget.Toolbar>`
+
+        `</RelativeLayout>`
+
+    <!-- ScrollView Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Start user info area -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <!-- Title Box -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="বইয়ের নাম লিখুন"
+                    app:startIconDrawable="@drawable/book_icon"
+                    app:startIconTint="@color/sweet_pink_light"
+                    app:endIconMode="clear_text"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="50"
+                    app:helperText="*Required"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxStrokeColor="@color/purple_light"
+                    app:helperTextTextColor="@color/gray"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/titleEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kalpurush"
+                        android:inputType="text"
+                        android:maxLength="51"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- SubTitle Box-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="লেখকের নাম লিখুন"
+                    app:startIconDrawable="@drawable/person"
+                    app:startIconTint="@color/sweet_pink_light"
+                    app:endIconMode="clear_text"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="50"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    app:helperText="*Required"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxStrokeColor="@color/purple_light"
+                    app:helperTextTextColor="@color/gray"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/subtitleEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kalpurush"
+                        android:inputType="text"
+                        android:maxLength="51"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Email Box-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="আপনার ইমেইল লিখুন"
+                    app:startIconDrawable="@drawable/email"
+                    app:startIconTint="@color/sweet_pink_light"
+                    app:endIconMode="clear_text"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="50"
+                    app:helperText="*Required"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxStrokeColor="@color/purple_light"
+                    app:helperTextTextColor="@color/gray"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/userEmailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kalpurush"
+                        android:inputType="textEmailAddress"
+                        android:importantForAccessibility="yes"
+                        android:maxLines="1"
+                        android:maxLength="51"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Details Box-->
+                <TextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="এই বই টি কি আপনার?\nবা কিভাবে আপনি এই বই এর সন্ধান পেলেন তা নিচে সংক্ষেপে লিখুন।"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/kalpurush"
+                    android:textColor="@color/gray"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="সংক্ষেপে লিখুন"
+                    app:startIconDrawable="@drawable/light"
+                    app:startIconTint="@color/sweet_pink_light"
+                    app:endIconMode="clear_text"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="300"
+                    app:helperText="*Required"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxStrokeColor="@color/purple_light"
+                    app:helperTextTextColor="@color/gray"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/detailsEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kalpurush"
+                        android:inputType="textMultiLine"
+                        android:maxLength="301"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- PDF URL Box-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="অনলাইন PDF URL লিংক দিন (Optional)"
+                    app:startIconDrawable="@drawable/link"
+                    app:startIconTint="@color/sweet_pink_light"
+                    app:endIconMode="clear_text"
+                    app:helperText="Optional"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxStrokeColor="@color/purple_light"
+                    app:helperTextTextColor="@color/gray"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pdfUrlEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kalpurush" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Story Box-->
+                <TextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="আমাদের নেওয়া তথ্যের বাহিরে যদি আপনি কিছু লিখতে চান বা আপনার ব্যক্তিগত মতামত জানাতে চান তাহলে তা লিখুন।"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/kalpurush"
+                    android:textColor="@color/gray"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="কিছু বলার থাকলে লিখুন (Optional)"
+                    app:startIconDrawable="@drawable/write_icon"
+                    app:startIconTint="@color/sweet_pink_light"
+                    app:endIconMode="clear_text"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="1000"
+                    app:helperText="Optional"
+                    app:expandedHintEnabled="true"
+                    app:helperTextTextColor="@color/gray"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/storyEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kalpurush"
+                        android:inputType="textMultiLine"
+                        android:maxLength="1001"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Submit Button-->
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="মেইল করুন"
+                    android:backgroundTint="#26A69A"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/water"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/kalpurush"
+                    android:layout_marginTop="16dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
