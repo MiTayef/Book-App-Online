@@ -22,6 +22,9 @@
 <p>✔ Banner Ad Implement from AdMob</p>
 <p>✔ Full Screen Ad Implement from AdMob</p>
 <p>✔ Custom Exit App Confirmation Dialogue</p>
+<p>✔ No Internet Alert With Animation</p>
+<p>✔ Book Request Section</p>
+<p>✔ Loading Animation</p>
 </br></br>
 
 
